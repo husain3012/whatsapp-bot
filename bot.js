@@ -6,19 +6,7 @@ const mongoose = require("mongoose");
 const axios = require("axios");
 require("dotenv").config();
 
-const truthFile = fs.readFileSync(__dirname + "/data/truths.txt").toString("utf-8");
-const rTruthFile = fs.readFileSync(__dirname + "/data/truths-r.txt").toString("utf-8");
-const dareFile = fs.readFileSync(__dirname + "/data/dares.txt").toString("utf-8");
-const rDareFile = fs.readFileSync(__dirname + "/data/dares-r.txt").toString("utf-8");
-const nhieFile = fs.readFileSync(__dirname + "/data/nhie.txt").toString("utf-8");
-const rNhieFile = fs.readFileSync(__dirname + "/data/nhie-r.txt").toString("utf-8");
 
-let truths = truthFile.split("\n");
-let truthsR = rTruthFile.split("\n");
-let dares = dareFile.split("\n");
-let daresR = rDareFile.split("\n");
-let nhie = nhieFile.split("\n");
-let nhieR = rNhieFile.split("\n");
 mongoose.connect("mongodb://localhost:27017/whatsappBot", { useNewUrlParser: true, useUnifiedTopology: true });
 const userSchema = new mongoose.Schema({
   noID: String,
