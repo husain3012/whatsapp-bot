@@ -1,0 +1,4 @@
+{
+    "ignore": ["node_modules/", "tokens/"],
+    "watch": ["bot.js", "data/"]
+}
